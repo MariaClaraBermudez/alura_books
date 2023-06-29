@@ -5,10 +5,10 @@ function exibirOsLivrosNaTela(listaDeLivros) {
     elementoComValorTotalDeLivrosDisponiveis.innerHTML = ''
     elementoParaInserirLivros.innerHTML = ''
     listaDeLivros.forEach(livro => {
-      //let disponibilidade = verificarDisponibilidadeDoLivro(livro)
-      let disponibilidade = livro.quantidade > 0 ? 'livro__imagens': 'livros__imagens indisponivel'
+        // let disponibilidade = verificarDisponibilidadeDoLivro(livro)
+        let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel' 
         elementoParaInserirLivros.innerHTML += `
-      <div class="livro">
+        <div class="livro">
         <img class="${disponibilidade}" src="${livro.imagem}"
           alt="${livro.alt}" />
         <h2 class="livro__titulo">
@@ -24,10 +24,10 @@ function exibirOsLivrosNaTela(listaDeLivros) {
     })
 }
 
-//function verificarDisponibilidadeDoLivro(livro){
-// if (livro.quantidade > 0){
-//      return 'livro___imagens'
-//  }else{
-//    return 'livros__imagens indisponivel'
-//  }
-//}   ESTA NA LINHA 7 ESCRITO COM OPERADOR TERNARIO
+// function verificarDisponibilidadeDoLivro(livro) {
+//   if (livro.quantidade > 0 ){
+//     return 'livro__imagens'
+//   } else {
+//     return 'livros__imagens indisponivel'
+//   }
+// }
